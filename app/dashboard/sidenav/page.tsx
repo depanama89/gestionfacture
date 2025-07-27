@@ -3,6 +3,8 @@ import NavLinks from "@/app/ui/navlinks";
 import { PowerIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+
+
 export default function Sidebar(){
     return(
         <aside className=" flex h-full flex-col px-4 py-4 md:px-6">
