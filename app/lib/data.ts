@@ -135,6 +135,7 @@ export async function fetchInvoicesPages(query: string) {
   `;
 
     const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE);
+    console.log(`Total pages for query "${query}":`, totalPages);
     return totalPages;
   } catch (error) {
     console.error('Database Error:', error);
@@ -176,7 +177,7 @@ export async function fetchCustomers() {
       FROM customers
       ORDER BY name ASC
     `;
-
+console.log(customers)
     return customers;
   } catch (err) {
     console.error('Database Error:', err);
