@@ -5,7 +5,7 @@ import { sql } from "@vercel/postgres";
 import postgres from "postgres";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { signIn } from "@/auth";
+import { signIn, signOut } from "@/auth";
 import { AuthError } from "next-auth";
 // import { customers } from "./placeholder-data";
 
@@ -119,18 +119,25 @@ revalidatePath(`/dashboard/invoices`);
   prevState:string | undefined,
   formData: FormData
  ){
-
+//  console.log("****" ,formData)
   try {
+    // console.log("****" ,formData)
     await signIn('credentials',formData);
   } catch (error) {
     if(error instanceof AuthError){
       switch(error.type){
         case 'CredentialsSignin':
-          return 'Invalid credentials';
+          return 'Invalid credentials ';
           default:
             return 'Something went wrong';
       }
     }
     throw error
   }
+ }
+
+ export async function signOutAction(){
+  console.log("***clique out")
+  await signOut()
+  redirect('/')
  }
