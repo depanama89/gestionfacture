@@ -14,6 +14,14 @@ export function CreateInvoice() {
   );
 }
 
+export function CreateCustomer(){
+  return(
+    <Link href="/dashboard/customers/create" className='flex h-10 items-center rounded-lg bg-[#333] px-4 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline'>
+      <span>Create Customer</span>
+      <PlusIcon className="h-5 md:ml-4" />
+    </Link>
+  )
+}
 export function UpdateInvoice({ id }: { id: string }) {
   return (
     <Link
