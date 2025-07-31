@@ -17,10 +17,10 @@ export default async function Page(props:{
     const totalPages= await fetchInvoicesPages(query)
   return (
     <div className="w-full">
-      <div className="flex w-full items-center ">
+      <div className="flex w-full items-center md:pr-4 ">
         <h1 className={`${lusitana.className} text-2xl`}>Invoices </h1>
       </div>
-      <div className="flex w-full items-center justify-center gap-2 md:mt-8 mt-4">
+      <div className="flex w-full items-center justify-center gap-2 md:pr-8 md:mr-8 mt-4">
         <Search placeholder="Search invoices..." />
         <CreateInvoice />
       </div>
