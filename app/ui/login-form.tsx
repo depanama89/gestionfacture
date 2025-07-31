@@ -25,8 +25,8 @@ export default function LoginForm() {
   return (
     <form action={formAction} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
-        <h1 className={`${lusitana.className} mb-3 text-2xl`}>
-          Please log in to continue.
+        <h1 className={`${lusitana.className} mb-3 text-xl`}>
+          Please log in to continue - or - Sign Up
         </h1>
         <div className="w-full">
           <div>
@@ -74,7 +74,7 @@ export default function LoginForm() {
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
        <Link href="/">
-       <Button className="mt-4 w-full bg-[#333] hover:bg-gray-800" >
+       <Button className="mt-4 w-full  hover:bg-gray-800" >
           Back <ArrowLeftCircleIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
        </Link> 
